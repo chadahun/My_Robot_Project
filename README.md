@@ -14,15 +14,14 @@
   - Language: C++, Python
 ## 실행방법
   - 의존성 설치
-    - ```bash
+    ```bash
       rosdep install --from-paths src --ignore-src -r -y
   - 빌드
-    - ```bash
+    ```bash
       colcon build --symlink-install
-    - ```bash
       source install/setup.bash
   - 통합 런치파일 실행
-    - ```bash
+    ```bash
       ros2 launch my_robot_bringup bringup.launch.py
 ## 핵심 트러블슈팅
   - Gazebo 플러그인 네임스페이스 충돌: 플러그인 간 데이터 간섭 문제를 해결하기 위해, 수신 노드에서 frame_id 검사를 통한 C++ 필터링 로직 구현
